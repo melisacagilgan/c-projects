@@ -17,7 +17,7 @@ The program will have three inputs:
 **Battles’ Data:** A distinct file will contain information about every battle that took place between these champions. Each line represents a separate battle and every piece of information in a line is separated by a space (i.e., battleID battleParticipant1 battleParticipant2 winner).
 
 **This program takes these inputs them as command-line arguments as follows:**
-<p align = "center">leaderboardMaker sortingCriteria ChampionDataFile BattlesDataFile</p>
+* leaderboardMaker sortingCriteria ChampionDataFile BattlesDataFile
 
 **leaderboardMaker:** When you run your program from the command line, you need start with its name. The name of the compiled program will be leaderboardMaker.
 
@@ -28,7 +28,7 @@ The program will have three inputs:
 **BattlesDataFile:** This is the name of the file containing the battles' information
 
 **An example is provided below:**
-<p align = "center">leaderboardMaker 1 champions.txt battles.txt</p>
+* leaderboardMaker 1 champions.txt battles.txt
 
 ## Internal Processing
 As the program reads the information about each champion, it will create a corresponding data structure for each one as it reads the champion’s name and their expected win rate, while initializing the number of battles, the number of wins, the actual win rate, and the expectation skew to zero at this stage. It will keep these structures in an array as illustrated below:
@@ -40,7 +40,7 @@ The following functions that you will implement as part of this assignment are c
 **getBattleData:** It takes the Champions array, and the name of the data file containing the battles' information. It then computes the number of battles and wins for every involved champion as it reads through a battle.
 
 **computeWinRate:** It takes the Champions array, and then traverses the array for every champion and computes the actual win rate and the expectation skew as follows:
-<p align = "center"><img src="https://i.ibb.co/zn35VwY/Capture2.png"></p>
+<p align = "center"><img src="https://i.ibb.co/zn35VwY/Capture2.png" width="300"></p>
 
 **heapSort:** It takes the Champions array and the sorting criteria which is either of the following three:
 1. actual win rate
@@ -50,5 +50,5 @@ It firstly applies the Build Heap algorithm to create a max-heap and then sorts 
 
 ## Output
 The program will print the sorted Champions leaderboard showing all the respective data for each champion (battles, wins, expected win rate, actual win rate, expectation skew). An example output is shown below where the sorting criteria is actual win rate.
-<p align = "center"><img src="https://i.ibb.co/3MMHfVg/Capture.png"></p>
+<p align = "center"><img src="https://i.ibb.co/3MMHfVg/Capture.png" width="700"></p>
 Implement a function called printLeaderboard to display the data of the sorted array.
